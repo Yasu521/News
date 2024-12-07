@@ -1,0 +1,34 @@
+[
+    {
+      "title": "Article 1",
+      "description": "This is a short description for Article 1.",
+      "image": "Claude-Monet-Garten-in-Giverny-1902-3840x2160-1.jpg",
+      "content": "news-en.html",
+      "js":"script2.js"
+    },
+    {
+      "title": "Article 2",
+      "description": "This is a short description for Article 2.",
+      "image": "Claude_Monet_-_Water_Lilies_-_1906_Ryerson.jpeg",
+      "content": "news-fr.html",
+      "js":"script3.js"
+    },
+    {
+      "title": "Article 3",
+      "description": "This is a short description for Article 3.",
+      "image": "image3.jpg",
+      "content": "article3.html"
+    },
+    {
+      "title": "Article 4",
+      "description": "This is a short description for Article 4.",
+      "image": "image4.jpg",
+      "content": "article4.html"
+    },
+    {
+      "title": "Article 5",
+      "description": "This is a short description for Article 5.",
+      "image": "image5.jpg",
+      "content": "article5.html"
+    }
+  ]
