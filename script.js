@@ -2,9 +2,11 @@ let currentIndex = 0;
 const itemsPerPage = calculateItemsPerPage();
 const container = document.querySelector('.container');
 const isMobile = window.innerWidth <= 768;
+
 displayArticles();
+
 document.getElementById('next-article').addEventListener('click', () => {
-  currentIndex += itemsPerPage;
+  currentIndex += calculateItemsPerPage();
   if (currentIndex >= articlesData.length) {
     currentIndex = 0;
   }
@@ -35,6 +37,7 @@ function displayArticles() {
       <p class="news-description">${doc.description}</p>
       <button class="news-readmore">Read more</button>
     `;
+
     container.appendChild(div);
     if (window.innerWidth <= 768) {
       document.getElementById('next-article').style.display = 'none';
@@ -43,12 +46,13 @@ function displayArticles() {
       document.getElementById('next-article').style.display = 'block';
       container.style.flexDirection = 'row';
     }
+
     div.querySelector('.news-readmore').addEventListener('click', () => {
       loadFullArticle(doc.content, doc.js, div,isMobile);
-    });
-  });
+    });});
 }
 function loadFullArticle(contentUrl, jsFile, parentElement, isMobile) {
+  
   if (isMobile) {
     const originalContent = parentElement.innerHTML;
 
@@ -62,7 +66,7 @@ function loadFullArticle(contentUrl, jsFile, parentElement, isMobile) {
     iframe.style.height = '400px';
 
     fullArticleContainer.appendChild(iframe);
-    parentElement.innerHTML = '';
+    parentElement.innerHTML = ''; 
     parentElement.appendChild(fullArticleContainer);
 
     const script = document.createElement('script');
@@ -73,15 +77,16 @@ function loadFullArticle(contentUrl, jsFile, parentElement, isMobile) {
 
   const mainContainer = document.querySelector('main.main-container');
   if (!mainContainer) {
-    console.error('404 content');
+    console.error('404');
     return;
   }
 
+  // フル記事用の新しい要素を作成
   const fullArticleContainer = document.createElement('div');
   fullArticleContainer.classList.add('full-article');
   fullArticleContainer.style.width = '100%';
   fullArticleContainer.style.margin = '0 auto';
-  fullArticleContainer.style.padding = '20px';
+  fullArticleContainer.style.padding = '20px'; 
   fullArticleContainer.style.boxSizing = 'border-box';
   fullArticleContainer.style.backgroundColor = '#fff';
   fullArticleContainer.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
@@ -90,7 +95,7 @@ function loadFullArticle(contentUrl, jsFile, parentElement, isMobile) {
   iframe.src = contentUrl;
   iframe.style.border = 'none';
   iframe.style.width = '100%';
-  iframe.style.height = 'auto';
+  iframe.style.height = 'auto'; 
   iframe.style.display = 'block';
 
   iframe.onload = () => {
@@ -125,4 +130,18 @@ function loadFullArticle(contentUrl, jsFile, parentElement, isMobile) {
 window.addEventListener('resize', () => {
   itemsPerPage = calculateItemsPerPage();
   displayArticles();
+});
+window.addEventListener('DOMContentLoaded', () => {
+  const dateElement = document.getElementById('current-date');
+
+  const defaultDate = "Sunday, May 21, 2000"; 
+  const useCurrentDate = true;
+
+  if (useCurrentDate) {
+      const today = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      dateElement.textContent = today.toLocaleDateString('en-US', options);
+  } else {
+      dateElement.textContent = defaultDate;
+  }
 });
