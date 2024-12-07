@@ -7,12 +7,6 @@ body {
     flex-direction: column;
     align-items: center;
   }
-link[rel="icon"] {
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
-}
 header {
     color: rgb(0, 0, 0);
     width: 100%;
