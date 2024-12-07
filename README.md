@@ -1,1 +1,1 @@
-# yasu521.github.io-news
+# News
