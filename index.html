@@ -3,33 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yasuhiro| 康洋 - News</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2FVBDQYBP"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Y2FVBDQYBP');
-  </script>
+  <title>Yasuhiro | 康洋 - News</title>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header>
-    <h1>Latest News</h1>
+    <div class="date" id="current-date"></div>
+    <h1>NEWS</h1>
     <hr>
   </header>
-  <div class="date" id="current-date"></div>
   <main class="main-container">
     <div class="container">
     </div>
-    <button id="next-article">Next Articles</button>
+    <button id="next-article">NEXT⇨</button>
   </main>
   <footer>
-    <hr>
     <p>&copy; 2024 News Platform. All Rights Reserved.</p>
   </footer>
-  <script src="./articles.json" defer></script>
+  <script>
+    const articlesData = [
+      {
+        "title": "Article 1",
+        "description": "This is a short description for Article 1.",
+        "image": "./content/image1.webp",
+        "content": "./content/script1.html",
+        "js": "./content/script1.js"
+      },
+      {
+        "title": "Article 2",
+        "description": "This is a short description for Article 2.",
+        "image": "./content/image2.webp",
+        "content": "./content/script2.html",
+        "js": "./content/script2.js"
+      },
+      {
+      "title": "Article 3",
+      "description": "This is a short description for Article 3.",
+      "image": "./content/image3.webp",
+      "content": "./content/script3.html",
+      "js": "./content/script3.js"
+    },
+    {
+      "title": "Article 4",
+      "description": "This is a short description for Article 4.",
+      "image": "./content/image4.webp",
+      "content": "./content/script4.html",
+      "js": "./content/script4.js"
+    },
+    {
+      "title": "Article 5",
+      "description": "This is a short description for Article 5.",
+      "image": "./content/image5.webp",
+      "content": "./content/script5.html",
+      "js": "./content/script5.js"
+      },
+      {
+        "title": "Article 6",
+        "description": "This is a short description for Article 6.",
+        "image": "./content/image6.webp",
+        "content": "./content/script6.html",
+        "js": "./content/script6.js"
+      }
+    ];
+  </script>
   <script src="./script.js" defer></script>
 </body>
 </html>
