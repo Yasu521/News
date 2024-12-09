@@ -204,9 +204,6 @@ window.addEventListener('resize', () => {
   itemsPerPage = calculateItemsPerPage();
   displayArticles();
 });
-window.onresize = function() {
-  location.reload();
-};
 window.addEventListener('DOMContentLoaded', () => {
   const dateElement = document.getElementById('current-date');
 
