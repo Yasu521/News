@@ -161,6 +161,9 @@ hr {
 #next-article {
   display: none;
 }
+#previous-article {
+  display: none;
+}
 
 .news-title {
   position: absolute; /* absoluteでタイトルを配置 */
