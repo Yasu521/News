@@ -153,4 +153,7 @@ hr {
 #next-article {
   display: none;
 }
+#previous-article{
+  display: none;
+}
 }
