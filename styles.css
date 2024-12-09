@@ -18,7 +18,10 @@ header .date {
   font-size: 10px;
   color: gray;
 }
-
+a {
+  color: inherit; /* 親要素の色を引き継ぐ */
+  text-decoration: none; /* 下線を削除 */
+}
 .main-container {
   display: flex;
   background-color: #ffffff;
