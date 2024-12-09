@@ -43,7 +43,7 @@ function displayArticles() {
       <img src="${doc.image}" alt="${doc.title}" class="news-image">
       <h3 class="news-title">${doc.title}</h3>
       <p class="news-description">${doc.description}</p>
-      <button class="news-readmore">Read more</button>
+      <button class="news-readmore">READ MORE</button>
     `;
 
     container.appendChild(div);
@@ -53,10 +53,16 @@ function displayArticles() {
       div.querySelector('.news-readmore').addEventListener('click', () => {
         loadFullArticle(doc.content, doc.js, doc.cssfile, div,isMobile);
       });
+      div.querySelector('.news-image').addEventListener('click', () => {
+        loadFullArticle(doc.content, doc.js, doc.cssfile, div,isMobile);
+      });
     } else {
       document.getElementById('next-article').style.display = 'block';
       container.style.flexDirection = 'row';
       div.querySelector('.news-readmore').addEventListener('click', () => {
+        loadFullArticle(doc.content2, doc.js2, doc.cssfile2, div,isMobile);
+      });
+      div.querySelector('.news-image').addEventListener('click', () => {
         loadFullArticle(doc.content2, doc.js2, doc.cssfile2, div,isMobile);
       });
     }
@@ -198,6 +204,9 @@ window.addEventListener('resize', () => {
   itemsPerPage = calculateItemsPerPage();
   displayArticles();
 });
+window.onresize = function() {
+  location.reload();
+};
 window.addEventListener('DOMContentLoaded', () => {
   const dateElement = document.getElementById('current-date');
 
