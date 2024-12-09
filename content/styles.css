@@ -135,6 +135,32 @@
     width: 100%;
     bottom: 0;
   }
+/* アニメーション: 記事タイトルのフェードイン */
+.post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* アニメーション: 記事の概要 */
+.post-excerpt {
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* ナビゲーションのホバー効果 */
+.header-nav a:hover {
+  color: #f39c12;
+  transition: color 0.3s ease-in-out;
+}
+
+/* サイドバーアイテムのホバー効果 */
+.sidebar-item:hover {
+  background-color: #f1c40f;
+  transition: background-color 0.3s ease-in-out;
+}
   
   /* レスポンシブ対応 */
   @media (max-width: 768px) {
