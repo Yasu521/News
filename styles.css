@@ -92,20 +92,19 @@ header .date {
 
 .news-image {
   max-width: 100%;
-  max-height: 150px;
+  max-height: 100%;
   object-fit: cover;
   border-bottom: 1.5px solid #bbb;
 }
 
 .news-title {
-  padding: 10px;
+  padding: 5px;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
 }
 
 .news-description {
-  padding: 10px;
   font-size: 14px;
   color: #555;
   line-height: 1.5;
@@ -113,13 +112,14 @@ header .date {
 }
 
 .news-readmore {
-  margin: 10px;
+  position: absolute;
+  bottom: 10px;  /* 下から10px */
+  left: 50%;     /* 左右中央に配置 */
+  transform: translateX(-50%); /* 左右中央を正確に調整 */
   font-family: "Bodoni Moda", serif;
-  align-self: center;
   background-color: #ffffff00;
   color: #000000;
   border: none;
-  padding: 10px 15px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
