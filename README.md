@@ -27,33 +27,4 @@
         "//js2": "",//change js desktop
         "//cssfile2":"",//change css desktop
       },
-      {
-      "title": "Article 3",
-      "description": "This is a short description for Article 3.",
-      "image": "./content/image3.webp",
-
-      "content": "./script3/script1-mobile.html",//mobile content
-      "content2": "./script3/script1-desktop.html",//desktop content
-
-      "//js": "",//change js mobile
-      "//cssfile":"",//change css mobile
-
-      "//js2": "",//change js desktop
-      "//cssfile2":"",//change css desktop
-    },
-    {
-      "title": "Article 4",
-      "description": "This is a short description for Article 4.",
-      "image": "./content/image4.webp",
-      "content": "./content/script4.html",
-      
-      "content": "./script3/script1-mobile.html",//mobile content
-      "content2": "./script3/script1-desktop.html",//desktop content
-
-      "//js": "",//change js mobile
-      "//cssfile":"",//change css mobile
-
-      "//js2": "",//change js desktop
-      "//cssfile2":"",//change css desktop
-    },
 ~~~
